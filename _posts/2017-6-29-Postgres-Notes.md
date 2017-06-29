@@ -26,5 +26,7 @@ vim /var/lib/pgsql/9.6/data/pg_hba.conf
 
 add record
 local   all             test_user                               md5
+or
+host   all             test_user        127.0.0.1/32                       md5
 and restart postgres
 service postgresql-9.6 restart
